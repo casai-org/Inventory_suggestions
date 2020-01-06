@@ -4,12 +4,6 @@ from sqlalchemy import create_engine
 import os
 from math import ceil
 
-os.environ['DJANGO_USER'] = 'awsadmin'
-os.environ['DJANGO_PASS'] = 'HBn2a5BSfhRw6yg'
-os.environ['DJANGO_HOST'] = 'catalejo.cto4eoy56d57.us-east-1.rds.amazonaws.com'
-os.environ['DJANGO_PORT'] = '5432'
-os.environ['DJANGO_DB']   = 'django'
-
 engine = create_engine('postgresql://{0}:{1}@{2}:{3}/{4}'.format(os.environ['DJANGO_USER'],
                                                                  os.environ['DJANGO_PASS'],
                                                                  os.environ['DJANGO_HOST'],
